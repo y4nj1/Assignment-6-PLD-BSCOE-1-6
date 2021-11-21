@@ -35,8 +35,8 @@ print(f"You got {CurrentScore} out of {MaxScore} questions correct.")
 if CurrentScore == 10:
     print(f"Congratulations, {player}! You have mastered adding numbers!")
 elif CurrentScore >= 6 and CurrentScore <= 9:
-    print("fYou did great, {player}! Study more and you'll ace this quiz soon!")
+    print(f"You did great, {player}! Study more and you'll ace this quiz soon!")
 else:
     if CurrentScore <= 5:
-        print("You failed the quiz, {player}! Try to focus on this lesson first.")
+        print(f"You failed the quiz, {player}! Try to focus on this lesson first.")
         print("Better luck next time!")
