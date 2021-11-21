@@ -4,31 +4,30 @@
 # Display the result summary of the 10 operations (ex 9/10)
 
 from random import randrange
-def display_intro():
-    title = "** A Simple Addition Quiz **"
-    print("*" * len(title))
-    print(title)
-    print("*" * len(title))
+title = "** A Simple Addition Quiz **"
+print("*" * len(title))
+print(title)
+print("*" * len(title))
 
 MaxScore = 10
 CurrentScore = 0
 
-def display_problemset():
-    count = 1
-    while count <= 10:
-        addend1 = randrange(0, 99)
-        addend2 = randrange(0, 99)
-        sum = addend1 + addend2
-        print(f"Question #{count}")
-        print(f"{str(addend1)} + {str(addend2)}")
-        answer = float(input("Your answer: "))
-        if answer == sum:
-            CurrentScore =+ 1
-            print("Your answer is correct!")
-        else:
-            print(f"Your answer is incorrect! The right answer is {sum}.")
-        count = count + 1
+count = 1
+while count <= 10:
+    addend1 = randrange(0, 99)
+    addend2 = randrange(0, 99)
+    sum = addend1 + addend2
+    print(f"Question #{count}")
+    print(f"{str(addend1)} + {str(addend2)}")
+    answer = int(input("Your answer: "))
+    if int(answer) == sum:
+        CurrentScore += 1
+        print("Your answer is correct!")
+    else:
+        print(f"Your answer is incorrect! The right answer is {sum}.")
+    count = count + 1
         
 
-intro = display_intro()
-problem = display_problemset()
+Fscore = print(f"You got {CurrentScore} out of {MaxScore} questions right.")
+    
+
