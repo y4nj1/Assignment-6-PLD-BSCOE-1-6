@@ -39,6 +39,20 @@ def Order():
             print(f"The order of the set of numbers are as follows: {sec_num}, {fourth_num}, {first_num}, and {third_num}.")
         else:
             print(f"The order of the set of numbers are as follows: {sec_num}, {fourth_num}, {third_num}, and {first_num}.")
+    
+    if highest == third_num:
+        if first_num >= sec_num and sec_num >= fourth_num:
+            print(f"The order of the set of numbers are as follows: {third_num}, {first_num}, {sec_num}, and {fourth_num}.")
+        elif first_num >= fourth_num and fourth_num >= sec_num:
+            print(f"The order of the set of numbers are as follows: {third_num}, {first_num}, {fourth_num}, and {sec_num}.")
+        elif first_num <= sec_num and first_num >= fourth_num:
+            print(f"The order of the set of numbers are as follows: {third_num}, {sec_num}, {first_num}, and {fourth_num}.")
+        elif sec_num >= fourth_num and fourth_num >= first_num:
+            print(f"The order of the set of numbers are as follows: {third_num}, {sec_num}, {fourth_num}, and {first_num}.")
+        elif fourth_num <= first_num and first_num >= sec_num:
+            print(f"The order of the set of numbers are as follows: {third_num}, {fourth_num}, {first_num}, and {sec_num}.")
+        else:
+            print(f"The order of the set of numbers are as follows: {third_num}, {fourth_num}, {sec_num}, and {first_num}.")
 
 # 3. display order
 display = Order()
