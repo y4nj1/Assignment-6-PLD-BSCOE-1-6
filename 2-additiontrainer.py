@@ -4,12 +4,17 @@
 # Display the result summary of the 10 operations (ex 9/10)
 
 from random import randrange
-player = input("Please enter your name here: ")
+title = "** A Simple Addition Quiz **"
+print("*" * len(title))
+print(title)
+print("*" * len(title))
+
+player = input("\33[1m\033[33mPlease enter your name here: \033[0m")
 
 print("-" * 24)
 
-print(f"Welcome to the quiz, {player}!")
-print("What are we waiting for? Let's start the quiz!")
+print(f"\33[31m\33[1mWelcome to the quiz,\033[0m \33[1m\33[3m\033[33m{player}!\033[0m")
+print("\33[1mWhat are we waiting for? Let's start the quiz!\033[0m")
 
 print("-" * 24)
 
@@ -27,27 +32,27 @@ while count <= 10:
     addend2 = randrange(0, 99)
     sum = addend1 + addend2
     print(f"Question #{count}")
-    print(f"{str(addend1)} + {str(addend2)}")
-    answer = int(input("Your answer: "))
+    print(f"\33[1m\33[94m{str(addend1)}\33[0m + \33[1m\33[95m{str(addend2)}\33[0m")
+    answer = int(input("\33[32mYour answer:\33[0m"))
     if int(answer) == sum:
         CurrentScore += 1
-        print("Your answer is correct!")
+        print("\33[1m\33[92mYour answer is correct!\33[0m")
     else:
-        print(f"Your answer is incorrect! The right answer is {sum}.")
+        print(f"\33[1m\33[91mYour answer is incorrect! The right answer is\33[0m \33[1m\33[93m{sum}.\33[0m")
     count = count + 1
 
 print("-" * 24)
 
-print(f"You got {CurrentScore} out of {MaxScore} questions correct.")
+print(f"\33[3mYou got \33[32m\33[1m{CurrentScore}\33[0m \33[3mout of\33[0m \33[34m\33[1m{MaxScore}\33[0m \33[3mquestions correct.\33[0m")
 if CurrentScore == 10:
-    print(f"Congratulations, {player}! You have mastered adding numbers!")
+    print(f"\33[92m\33[1mCongratulations,\033[0m  \33[1m\33[3m\033[33m{player}!\033[0m \33[92m\33[1mYou have mastered adding numbers!\033[0m ")
 elif CurrentScore >= 6 and CurrentScore <= 9:
-    print(f"You did great, {player}! Study more and you'll ace this quiz soon!")
+    print(f"\33[94m\33[1mYou did great,\033[0m  \33[1m\33[3m\033[33m{player}!\033[0m! \33[94m\33[1mStudy more and you'll ace this quiz soon!\033[0m ")
 else:
     if CurrentScore <= 5:
-        print(f"You failed the quiz, {player}! Try to focus on this lesson first.")
-        print("Better luck next time!")
+        print(f"\33[1m\33[91mYou failed the quiz,\033[0m \33[1m\33[3m\033[33m{player}!\033[0m \33[1m\33[91mTry to focus on this lesson first.\033[0m")
+        print("\33[1mBetter luck next time!\033[0m")
 
 print("-" * 24)
 
-print("Thank you for taking this quiz.")
+print("\33[1m\33[35mThank you for taking this quiz.\033[0m")
