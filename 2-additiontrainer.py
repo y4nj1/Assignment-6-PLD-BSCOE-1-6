@@ -39,7 +39,7 @@ while count <= 10:
     addend1 = randrange(0, 99)
     addend2 = randrange(0, 99)
     sum = addend1 + addend2
-    print(f"Question #{count}")
+    print(f"\33[1m\33[3mQuestion #{count}\33[0m")
     print(f"\33[1m\33[94m{str(addend1)}\33[0m + \33[1m\33[95m{str(addend2)}\33[0m")
     answer = int(input("\33[32mYour answer:\33[0m"))
     if int(answer) == sum:
